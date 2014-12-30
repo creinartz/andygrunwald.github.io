@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[Andy Grunwald]]></title>
+    <link href="/atom.xml" rel="self"/>
+    <link href="/"/>
+    <updated>2014-12-30T20:23:08+01:00</updated>
+    <id>/</id>
+            <author>
+            <name><![CDATA[Andy grunwald]]></name>            <email><![CDATA[andygrunwald@gmail.com]]></email>        </author>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[TYPO3-Analytics goes Jacobine]]></title>
+            <link href="/blog/2014/04/22/typo3-analytics-goes-jacobine"/>
+            <updated>2014-04-22T00:00:00+02:00</updated>
+            <id>/blog/2014/04/22/typo3-analytics-goes-jacobine</id>
+            <content type="html"><![CDATA[<p>For quite some time i was looking for a new name for an open source project of mine: <em>TYPO3-Analytics</em>.</p>
+
+<p>I am (sadly) not creative in naming things or painting.
+The biggest part of creativity is during development and programing.
+To find a good name which sounds nice and got a relation to a tool, task or goal is (in my point of view) very difficult.
+There are some names of projects i like, because the sound good like <a href="https://flynn.io/">Flynn.io</a> or <a href="http://hood.ie/">hood.ie</a>.
+At 3rd March 2014 i wrote a blogpost about this challenge to use the power of the community: TYPO3-Analytics is looking for a new name - suggestions welcome!</p>
+
+<p>Next to this blog post i got on my girlfriends nerves with the recurring questions like "What do you think about name x? Or y?".
+And i asked my twitter timeline many times and wondered how for example Apache chose names for their product.
+They <a href="http://www.apache.org/dev/project-names.html">got rules for product names</a>, but i did not found a resource who describes the story about this names.
+<a href="https://twitter.com/irnnr">Ingo</a> <a href="https://twitter.com/irnnr/status/449367546211221504">mentioned</a> that <a href="https://tika.apache.org/">Tika</a> is one of the project founders’ kid’s toy pet’s name.
+<a href="https://twitter.com/shirleman">Scott</a> <a href="https://twitter.com/shirleman/status/449614357022773248">suggested</a> Donk, because it was his stuffed donkey's name as a kid :D
+Anyway.</p>
+
+<p>I thought a lot about possible names and talked to many people.
+Some of the ideas were <em>Vizben</em>, <em>Benvis</em>, <em>Mevis</em>, <em>Pinocchio</em>, <em>Gepetto</em>, <em>Viva con analysis</em>, <em>Knock.io</em> and so on.
+Nothing special.
+Nothing "good" enough.
+Nothing i like at the first time.
+So i continued my search.
+During a lunch break i talked to my colleagues <a href="https://twitter.com/janvanthoor">Jan</a> and <a href="https://twitter.com/milchjieper">Dominik</a> about this topic.
+Jan mentioned that i might have to chose a general topic which i focus on for the name search.
+He suggested mining.
+I liked the idea and started my research in the mining area ...</p>
+
+<h2>The new name: <em>Jacobine</em></h2>
+
+<p>I was born and live in <a href="http://en.wikipedia.org/wiki/Duisburg">Duisburg, Germany</a>.
+Duisburg is a small town in <a href="http://en.wikipedia.org/wiki/North_Rhine-Westphalia">North Rhine-Westphalia</a> and part of the Ruhrgebiet.
+Duisburg is very popular for its steel industry and coal mining (see the <a href="http://en.wikipedia.org/wiki/Landschaftspark_Duisburg-Nord">Landschaftspark Duisburg-Nord</a> or a <a href="http://de.wikipedia.org/wiki/Liste_von_Bergwerken_in_Nordrhein-Westfalen#Duisburg">list of coal mines in Duisburg</a>).
+In 1855 an english company started to build a new mine called <em>Jacobine</em>.
+It was located in Duisburg-Meiderich near to <a href="http://en.wikipedia.org/wiki/Oberhausen">Oberhausen</a>.
+In 1859 the mine have to shutdown, because it was damaged by water.
+11 years later, in 1870, the mine was repaired.
+In 1871 the mine was put into production again under a new name Schacht 1.
+Schacht 1 was part of the bigger mine <a href="http://de.wikipedia.org/wiki/Zeche_Westende">Westende</a>.</p>
+
+<p>Dominik mentioned that the name <em>Jacobine</em> got a bad taste, because it was damaged and has to be shutdown.
+Dominik is right, but the mine was repaired and put into production again.
+I would agree Dominik that <em>Jacobine</em> is a bad name for a management software or something in this area.
+But we do not build a management software ;)
+And one important fact: I like the new name.
+It is unique in the software world (as far as i know), it got a relation to the main area of the tool we build ([data]mining) and a relationship to my lovely town Duisburg (but of course contributor from other cities and countries are welcome as well :)).</p>
+
+<p><strong>So lets try to get not damaged by water :)</strong></p>
+
+<h2>Migrate your TYPO3-Analytics clone</h2>
+
+<p>If you got an existing clone of the project with the old name TYPO3-Analytics you have to migrate the git repository to keep up to date.
+Here we go:</p>
+
+<pre><code class="bash">$ git remote -v
+origin git@github.com:andygrunwald/TYPO3-Analytics.git (fetch)
+origin git@github.com:andygrunwald/TYPO3-Analytics.git (push)
+
+$ git remote set-url origin git@github.com:andygrunwald/Jacobine.git
+
+$ git remote -v
+origin git@github.com:andygrunwald/Jacobine.git (fetch)
+origin git@github.com:andygrunwald/Jacobine.git (push)
+</code></pre>
+
+<p>Please pay attention to the name of your remote (origin or maybe <a href="https://help.github.com/articles/syncing-a-fork">upstream</a>) and the protocol you use (<em>git://</em> or <em>https://</em>).</p>
+
+<p>The ecosystem around <em>Jacobine</em> (the <a href="https://github.com/andygrunwald/TYPO3-Analytics-Web">web frontend</a>, the <a href="https://github.com/andygrunwald/TYPO3-Analytics-Vagrant">vagrant machine</a> and the <a href="https://github.com/andygrunwald/chef-typo3analytics">chef cookbook</a>) will be renamed in the next days.</p>
+
+<p>If you got any kind of problems or need help to migrate your clone i will help you as much as possible.
+Just add a comment, send a tweet (<a href="https://twitter.com/andygrunwald">@andygrunwald</a>) or send me an email.</p>
+
+<p>PS: Thanks to all people who was involved to find a new name and attend all the discussions!
+PPS: And thanks to <a href="https://twitter.com/georg_ringer">Georg</a>, <a href="https://twitter.com/ffffux">Lena</a>, <a href="https://twitter.com/benvantende">Ben</a> and <a href="https://twitter.com/misprintedtype">Ola</a> who attend my <a href="https://twitter.com/andygrunwald/status/458286697416245249">last survey on twitter</a> regarding <em>Jacobine</em> or <em>Jacob</em> (self made abbreviation for <em>Jacobine</em>) - 3:1 for <em>Jacobine</em>!</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[TYPO3-Analytics: Release of version v0.1.0]]></title>
+            <link href="/blog/2014/04/19/typo3-analytics-release-of-version-v0.1"/>
+            <updated>2014-04-19T00:00:00+02:00</updated>
+            <id>/blog/2014/04/19/typo3-analytics-release-of-version-v0.1</id>
+            <content type="html"><![CDATA[<p>The project grows and grows :)
+The next release of <a href="https://github.com/andygrunwald/TYPO3-Analytics/releases/tag/v0.1.0">TYPO3-Analytics in version v0.1.0</a> is out!
+This release covers various nice features, enhancements and bugfixes.</p>
+
+<p>Get the new version now! Its hot: <a href="https://github.com/andygrunwald/TYPO3-Analytics/releases/tag/v0.1.0">TYPO3-Analytics v0.1.0</a></p>
+
+<p>But what was done in the last <a href="http://www.timeanddate.com/date/durationresult.html?d1=15&amp;m1=2&amp;y1=2014&amp;d2=19&amp;m2=4&amp;y2=2014&amp;ti=on">65 days</a> and <a href="https://github.com/andygrunwald/TYPO3-Analytics/commits/v0.1.0">109 commits</a>?
+Some numbers (from the <a href="https://github.com/andygrunwald/TYPO3-Analytics/compare/v0.0.1...v0.1.0">github compare view</a>):</p>
+
+<ul>
+<li>70 changed files</li>
+<li>5,934 line additions</li>
+<li>1,297 line deletions</li>
+<li>1 contributor</li>
+</ul>
+
+<p>Here is a list of the most important changes.</p>
+
+<h2>Main changes</h2>
+
+<ul>
+<li>Added a changelog</li>
+<li>[Consumer Download&#92;HTTP] Added error check for rename operation</li>
+<li>[Consumer Analysis&#92;PHPLoc] Parse output directly without writing a xml file to disk</li>
+<li>[Consumer Analysis&#92;CVSAnaly] Moved cvsanaly settings to seperate config file</li>
+<li>[Consumer] Centralized context generation for logging</li>
+<li>[Consumer Analysis&#92;CVSAnaly] Set writable path</li>
+<li>Added (useful) information to composer.json about the project</li>
+<li>[Consumer] Adjusted all consumer to use the new symfony/process component</li>
+<li>Added symfony/process component and created a ProcessFactory</li>
+<li>Updated monolog from 1.7.0 to 1.8.0 and updated various dependencies</li>
+<li>Removed sudo-usage of system calls</li>
+<li>Changes auto_delete default option for queues to false</li>
+<li>[Logging] No new line after every log entry. One line per log entry</li>
+<li>[Consumer] Adjusted all consumer to use the new structure of DLX</li>
+<li>[Consumer] Added a method to reject a message and reworked consumer to reject messages</li>
+<li>[Consumer / Producer] Added support for dead lettering of RabbitMQ and reworked setup of queues and exchanges</li>
+<li>[Consumer Analysis&#92;GithubLinguist] Fixed fatal error during logging</li>
+<li>Added a bunch of comments with message formats to every consumer</li>
+<li>Added class comments to all Commands</li>
+<li>[Producer ReviewTYPO3OrgCommand] Removed, because this is obsolete</li>
+<li>[Consumer Download&#92;HTTP] Removed TYPO3 dependency in file name</li>
+<li>Added File object</li>
+<li>[Consumer Download&#92;HTTP] Replaced wget download with a curl download</li>
+<li>Add missing methods to ConsumerInterface</li>
+<li>Set product under MIT License</li>
+<li>Added PHP >= 5.4 as requirement</li>
+<li>Refactored the AMQPConnection and AMQPMessage into a factory</li>
+<li>Added PSR-2 as coding guideline standard</li>
+<li>Added first unit tests for several components</li>
+<li>Integrated Travis-CI as continuous integration environment</li>
+<li>Integrated Versioneye for dependency checks</li>
+<li>Integrated scrutinizer-ci for code quality analysis</li>
+<li>[Consumer Crawler&#92;Gerrit] Add message acknowledgement if no projects are available</li>
+</ul>
+
+<h2>Did we reach the goal / roadmap from the v0.0.1 release?</h2>
+
+<p>In the release of version v0.0.1 we defined some goals for the next release (this one), but did we reach them? Lets check it:</p>
+
+<ul>
+<li><em>code quality</em>: We have <strong>refactored</strong> many lines of code and extracted them to seperate classes and introduced common <strong>design patterns</strong> like <strong>Factory</strong>. Further more we`ve introduced services like <strong><a href="https://scrutinizer-ci.com/">scrutinizer</a></strong> to get some <strong>numbers about quality</strong>. Standards like <strong><a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md">PSR-2</a></strong> were applied.</li>
+<li><em>testing</em>: <strong>Unit tests</strong> was introduced in this release. The <strong>code coverage</strong> is not very high (<strong>18%</strong>), but 18% are better than nothing! <strong><a href="https://travis-ci.org/">TravisCI</a></strong> was introduced to check the <strong>success</strong> of the unit tests <strong>continuously</strong>.</li>
+<li><em>stability</em>: Many <strong>bugs</strong> were <strong>fixed</strong> (e.g. Fatal error in GithubLinguist-Logging), external <strong>dependencies updated</strong> (e.g. <a href="https://github.com/Seldaek/monolog">Monolog</a> from 1.7 to 1.8), <strong>new components introduced</strong> to make use of proven code (e.g. <a href="http://symfony.com/doc/current/components/process.html">symfony/process</a> component) or <strong>more error checks</strong> added to find some failure faster.</li>
+<li><em>flexibility</em>: The product is now <strong>released under</strong> the <strong><a href="http://opensource.org/licenses/MIT">MIT license</a></strong> as a permissive free software license. This product can now be official used in several environments (e.g. commercial). We have <strong>removed hardcoded dependencies</strong> (e.g. TYPO3-Related names in Download&#92;HTTP consumer) or made <strong>more attributes configurable</strong> (e.g. <a href="https://github.com/MetricsGrimoire/CVSAnalY">CVSAnaly</a> config) or <strong>support more RabbitMQ queue and exchange features</strong> on consumer / producer level.</li>
+<li><em>documentation</em>: There were <strong>several comments added</strong> to the source code. Every class got a class header comment which <strong>describes</strong> what <strong>the class is responsible</strong> for. Every <strong>consumer</strong> got the <strong>accepted message format</strong> in the docs.</li>
+</ul>
+
+<p>In general this release and the goals was a success.
+One (important) goal was missed: Write more blog posts about the architecture and concepts of this project.
+This goal was missed due to the lack of time.
+Next to this goal during the development of TYPO3-Analytics another open source project CVSAnaly was improved a lot.
+<a href="https://github.com/MetricsGrimoire/CVSAnalY/commits?author=andygrunwald">See the commit history</a>.
+Why? Because TYPO3-Analytics use this tool and we want to use more features of it ;)</p>
+
+<h2>Roadmap for the next release</h2>
+
+<p>Currently there is no strict roadmap for the next release.
+But we will try to focus on some things:</p>
+
+<ul>
+<li><em>Find a name</em>: We are looking for a new name for quite some time (see "TYPO3-Analytics is looking for a new name - suggestions welcome!"). We try to find a new name and apply it to the ecosystem</li>
+<li><em>Make it more production ready</em>: We try to make the product more production ready. How? Add some more error checks, add some checks if the system is production ready, add a proof of concept for a more easier deployment (e.g. on a amazon cloud). Ideas welcome!</li>
+<li><em>Prove the "productioness"</em>: We want to start some small analysis of open source projects and create reports for it that other people can see how to use this tool and what is it good for and how amazing such small piece of code can be.</li>
+<li><em>Spread the work</em>: We want to communicate more (on barcamps, conferences, blogs) about it. We want to try to get more / the first external contributor.</li>
+</ul>
+
+<p>If you want to see some features in it, contact me!</p>
+
+<p>We know that this are hard goals.
+We try to reach as much as possible of them.
+If you want to support us, see the next chapter ;)</p>
+
+<h2>Be part of the the next release</h2>
+
+<p>We are looking for motivated contributors for this project.
+You do not have to be a programmer.
+We are looking for designers, frontend people, people for communication, people who got new ideas or want to push some new analysis.</p>
+
+<p>If you do not have (spare) time for this, we are looking for sponsors as well.
+If you want to push some results, we would be proud to welcome you as a sponsor :)</p>
+
+<p><strong>If you do not know how to contribute or how to get into it</strong>: I <strong>will offer workshops (for free!)</strong> for TYPO3-Analytics, <strong>how this works</strong>, about the <strong>architecture</strong>, about the <strong>goal</strong>, about the <strong>motivation</strong> or about <strong>stuff you are interested in</strong>.
+I can offer rooms in Düsseldorf, Germany for it with internet connection for this.
+If you are interested, just ping me as well.</p>
+
+<p>If you are interested just contact me via Twitter (<a href="https://twitter.com/andygrunwald">@andygrunwald</a>) or by e-mail (<a href="https://github.com/andygrunwald">github profile</a>).</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[The story about the topic of my bachelor thesis]]></title>
+            <link href="/blog/2014/03/21/the-story-about-the-topic-of-my-bachelor-thesis"/>
+            <updated>2014-03-21T00:00:00+01:00</updated>
+            <id>/blog/2014/03/21/the-story-about-the-topic-of-my-bachelor-thesis</id>
+            <content type="html"><![CDATA[<p>This post is about my bachelor thesis, a conference, cool people from spain, some academic paper, a lot of open source and how it can be if you let the flow runs :)</p>
+
+<p>Everything starts in February 2013.
+At this time i studied business informatics next to my fulltime job at <a href="http://www.wmdb.de/">wmdb Systems GmbH</a> as software developer (mainly as web developer for <a href="http://typo3.org/">TYPO3</a> related projects).
+The regular time of this course of studies is seven semester.
+In Februar 2013 i was in the 5th semester and every exam were passed.
+Just in (regular) time.</p>
+
+<p>In the 7th semester i had to write my bachelor thesis.
+A scientific paper about a specific topic with ~40-60 pages.
+I was thinking a lot about a possible topic and i knew that i wanted to write something about software, software development and so on.
+But i did not had a specific topic in mind at this time.</p>
+
+<p>At 2nd &amp; 3rd February 2013 i visited <a href="https://archive.fosdem.org/2013/">FOSDEM</a> in Brussels, Belgium for the first time with some of my friends.
+It was not far away from my hometown (~200 km), so it was a very short ride.
+And due to the big range of topics this conference sounds very interesting!</p>
+
+<p>At the conference i attend many talks about different topics.
+But one talk was kind of special for me: <a href="https://archive.fosdem.org/2013/schedule/event/do_you_want_to_measure_your_project/">Do you want to measure your project?</a> by <a href="https://archive.fosdem.org/2013/schedule/speaker/jesus_m_gonzalez_barahona/">Jesus M. Gonzalez-Barahona</a> (<a href="http://video.fosdem.org/2013/lightningtalks/Do_you_want_to_measure_your_project_.webm">Video</a>, <a href="https://speakerdeck.com/jgbarah/do-you-want-to-measure-your-project">Slides</a>).
+Jesus talks about <a href="http://metricsgrimoire.github.io/">Metrics Grimoire</a>, a toolset to crawl data which were produced during software development and <a href="http://vizgrimoire.bitergia.org/">Viz Grimoire</a>, a toolset to visualize the received data.
+Some tools of MetricsGrimoire are <a href="https://github.com/MetricsGrimoire/CVSAnalY">CVSAnalY</a> to crawl VCS (CVS, Subversion, Git, ...), <a href="https://github.com/MetricsGrimoire/Bicho">Bicho</a> to extract data from Bugtracker (Jira, Redmine, Mantis, ...) or <a href="https://github.com/MetricsGrimoire/MailingListStats">MLStats</a> to get email content from mailinglists.</p>
+
+<p>After every conference i`m very motivated to start new things and have a deeper look in topics where i attend talks to.
+This was the same for FOSDEM.
+After the conference i had a deeper look at CVSAnaly.
+Downloaded it, installed it and started to crawl some repositories i know (e.g. <a href="https://git.typo3.org/Packages/TYPO3.CMS.git">TYPO3.CMS.git</a>).
+16 days after the conference, i started to contribute to CVSAnaly with <a href="https://github.com/MetricsGrimoire/CVSAnalY/commit/d69e569d2dff5fa8e98cc0f3c414071eaaf37984">a small notice about the max_allowed_packet of MySQL</a> for the first time.</p>
+
+<p>At this time i didn`t wrote one line <a href="http://www.python.org/">Python</a>.
+But every programmer has to <a href="http://pragprog.com/the-pragmatic-programmer">learn one language per year</a>.
+So i started to learn Python and <a href="https://github.com/MetricsGrimoire/CVSAnalY/commits?author=andygrunwald">continued contribution to CVSAnaly</a>.
+In the same time (<a href="https://github.com/andygrunwald/TYPO3-Analytics/commit/b44dd91e359ad55478919cc94278d26fffbdde03">Apr 19, 2013</a>) i started <a href="https://github.com/andygrunwald/TYPO3-Analytics">TYPO3-Analytics</a>, a project to analyze and visualize various data sources of the TYPO3 ecosystem based on open / standard APIs.
+CVSAnaly was integrated in this analysis suite.</p>
+
+<p>From my point of view, the topic of analyze data which will be produced during software development was very interesting, because i`am a software developer.
+And how cool is it to get new information and knowledge from data you has produced?!? So i continued to develop TYPO3-Analytics and started to made some small researches about the <a href="http://en.wikipedia.org/wiki/Mining_Software_Repositories">Mining Software Repositories</a> field.</p>
+
+<p>Due to this enthusiasm, i found my topic for my bachelor thesis: Software Repository Mining - Concept and Potentials.
+In October / November 2013, i looked for a professor as an adviser, registered this topic at my university and started to research and writing this paper.
+Next to this i continued to work at TYPO3-Analytics and CVSAnaly.
+During this time i found a lot of interesting paper about programming topics.
+Here is a very small list of this paper (if you want more just ping me ;)):</p>
+
+<ul>
+<li><a href="https://www.cs.purdue.edu/sss/projects/dynjs/pldi275-richards.pdf">An Analysis of the Dynamic Behavior of JavaScript Programs</a></li>
+<li><a href="http://msr.uwaterloo.ca/msr2005/papers/28.pdf">Analysis of Signature Change Patterns</a></li>
+<li><a href="http://mcis.polymtl.ca/publications/2013/msr_jojo.pdf">Will My Patch Make It? And How Fast? Case Study on the Linux Kernel</a></li>
+</ul>
+
+<p>At <a href="https://fosdem.org/2014/">1st &amp; 2nd February 2014 the FOSDEM event</a> takes places in Brussels, Belgium again.
+Due to the communication at the <a href="https://lists.libresoft.es/listinfo/metrics-grimoire">MetricsGrimoire mailinglist</a> i knew that people from <a href="http://bitergia.com/">Bitergia</a> (<a href="https://twitter.com/jgbarah/">@jgbarah</a>, <a href="https://twitter.com/sanacl">@sanacl</a>, <a href="https://twitter.com/dizquierdo">@dizquierdo</a>, etc.) were there as well.
+I <a href="https://twitter.com/andygrunwald/status/428850540228132864">twittered that i want to meet them</a> and ~1 hour later we had a nice chat in the cafeteria of the university of Brussels.
+I showed and talked about the concepts of TYPO3-Analysis and got really positive feedback.</p>
+
+<p>~13 month later (since FOSDEM 2013), many things happen.
+I learned new tools (CVSAnaly, Bicho, ...), a new programing language (Python), a lot of programing experience and concepts with new tools (TYPO3-Analytics, <a href="https://www.rabbitmq.com/">RabbitMQ</a>, <a href="http://supervisord.org/">supervisord</a>, <a href="http://www.vagrantup.com/">Vagrant</a>, <a href="http://www.getchef.com/chef/">Chef</a>...), new nice and interesting people (Jesus, Luis, Daniel, ...), a cool business concept (Bitergia) and many new knowledge about a interesting research field i did not know before (Mining Software Repositories).
+And finally, i passed my Bachelor of Science degree today.</p>
+
+<p>And the whole story might be another one if i had not visit FOSDEM in Februar 2013.
+A big and huge THANK YOU to all people who were part of this story (creator of tools, speaker, twitterer, irc chat attendees and other community member of the open source world).
+The whole time was a lot of fun.
+Of course there was stress, too.
+But the fun was much bigger.</p>
+
+<p>And what is the conclusion of this story? I do not know.
+Maybe visit conferences and be part of an awesome community? I do not really know.
+But i can recommend this way to try it out! If you need help to get into it, because you do not know how: Ping me :)
+I will help you do get the right foot in!</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[TYPO3-Analytics is looking for a new name - suggestions welcome!]]></title>
+            <link href="/blog/2014/03/03/typo3-analytics-is-looking-for-a-new-name"/>
+            <updated>2014-03-03T00:00:00+01:00</updated>
+            <id>/blog/2014/03/03/typo3-analytics-is-looking-for-a-new-name</id>
+            <content type="html"><![CDATA[<p>At <a href="https://github.com/andygrunwald/TYPO3-Analytics/commit/b44dd91e359ad55478919cc94278d26fffbdde03">Apr 19, 2013</a> i started <a href="https://github.com/andygrunwald/TYPO3-Analytics">TYPO3-Analytics</a> to create a prototype or proof of concept to make my first steps in fields data mining / software repository mining, statistics and data visualisation.
+At this time i got a big and deep knowledge of the <a href="http://typo3.org/">TYPO3</a> ecosystem (code, people, tools, systems, processes, events, etc.) and the TYPO3 community manager <a href="http://ben.vanten.de/">ben van 't ende</a> motivated me to create some metrics ;)
+So the first project was TYPO3.</p>
+
+<p>For a github repository you need a name.
+So i was in the situation to name my proof of concept.
+Due to the topics above and the missing flash of inspiration i chose the name <em>TYPO3-Analytics</em>.
+From my point of view this name does not fit any more for some reasons:</p>
+
+<ol>
+<li>The project aims to use public available information over centralized / standard ways (e.g. APIs). With this in mind it is possible to analyze various projects. Not only TYPO3. The prefix <em>TYPO3</em> is not necessary and might be lead to confusion if e.g. <a href="https://github.com/symfony/symfony">Symfony2</a> will be analyzed.</li>
+<li>The complete project is much more than Analytics. It is about collect and receive data, produce new information and knowledge about this data with the usage of algoritms of data, web and text mining, visualize data and activity in various ways, motivate people to more open source works, say thank you by a wow effect of what a single person has achieved and much more.</li>
+</ol>
+
+<p>This are only two reasons.
+But i think that this are two really good reasons to choose a new name for this baby.
+And this is the time where YOUR innovation comes in.
+We are looking for a new name with your help.
+Here are some keywords which might be related to this project:</p>
+
+<ul>
+<li>data</li>
+<li>open source</li>
+<li>people</li>
+<li>contributer</li>
+<li>data / web / text mining</li>
+<li>software repository mining</li>
+<li>metrics</li>
+<li>statistics</li>
+<li>visualisation</li>
+<li>wow</li>
+<li>motivation</li>
+<li>information</li>
+<li>knowledge</li>
+<li>community</li>
+<li>results</li>
+<li>numbers</li>
+<li>Your keyword here ...</li>
+</ul>
+
+<p>I tried various startup name generators to get some ideas for a new, cool and fancy or usable and logical, name.
+But i was not successful.
+Maybe you got some ideas?
+EVERY idea is welcome.
+New keywords are welcome, too.
+Please post your idea in the comments or send a tweet to my account <a href="https://twitter.com/andygrunwald">@andygrunwald</a>.</p>
+
+<p>The first idea came from <a href="https://twitter.com/michadu_typo3">Michael Oehlhof</a>: <em>TYPO3 CoMet</em> - CoMet means Community Metrics.
+Not bad this idea.
+But the TYPO3 prefix is already there and Community metrics are a bit to general.
+Or what do you think? Your opinion is welcome too.
+But anyway.
+Thanks for this idea Michael!</p>
+
+<p>Thanks for your help!</p>
+
+<h3>Update at 2014-03-05</h3>
+
+<p>Awesome! I received some name suggestions from different people.
+A <strong>big thanks</strong> to this!</p>
+
+<ul>
+<li>René Kerner (<a href="https://twitter.com/rk3rn3r">@rk3rn3r</a>) <a href="https://twitter.com/rk3rn3r/status/440604026368180224">suggested</a> <em>knoff-hoff</em>, related to the german tv show "<a href="http://de.wikipedia.org/wiki/Die_Knoff-Hoff-Show">Die Knoff-Hoff-Show</a>".</li>
+<li>Christoph Moeller (<a href="https://twitter.com/npublish_chris">@npublish_chris</a>) <a href="https://twitter.com/npublish_chris/status/440969565472698368">mentioned</a> <em>Shunkan</em>, japanase for "moment".</li>
+<li>Mario Mainz (<a href="https://twitter.com/m_mainz">@m_mainz</a>) raised some acronyms like <em>SWARM</em> (SoftWAre Metrics) or <em>SWAN</em> (SoftWare ANalytics), <a href="https://twitter.com/m_mainz/status/440972275597066241">lazy generated</a> by an <a href="http://acronymcreator.net/ace.py">Acronym Creator</a>.</li>
+<li>Georg Ringer (<a href="https://twitter.com/georg_ringer[">@georg_ringer</a>) <a href="https://twitter.com/georg_ringer/status/441263913896644608">twittered</a> <em>quatrix</em>, <em>quatrics</em>, <em>metriquality</em> and <em>metaqual</em>.</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[TYPO3-Analytics: Release of version v0.0.1]]></title>
+            <link href="/blog/2014/02/15/typo3-analytics-release-of-version-v0.0"/>
+            <updated>2014-02-15T00:00:00+01:00</updated>
+            <id>/blog/2014/02/15/typo3-analytics-release-of-version-v0.0</id>
+            <content type="html"><![CDATA[<p>Today i tagged and released version <a href="https://github.com/andygrunwald/TYPO3-Analytics/releases/tag/v0.0.1">v0.0.1</a> of the project <a href="https://github.com/andygrunwald/TYPO3-Analytics">TYPO3-Analytics</a>.
+After <a href="http://www.timeanddate.com/date/durationresult.html?d1=19&amp;m1=4&amp;y1=2013&amp;d2=15&amp;m2=2&amp;y2=2014&amp;ti=on">303 days</a> and <a href="https://github.com/andygrunwald/TYPO3-Analytics/commits/v0.0.1">144 commits</a> later, i decided to make a "cut" and start a new version.
+This version is a first (workable as far as i know) "proof of concept" for a repository mining platform to produce (community) metrics of various systems.
+The first example system is <a href="http://typo3.org/">TYPO3</a>.</p>
+
+<h1>What does this version include?</h1>
+
+<p>13 <a href="http://www.rabbitmq.com/">RabbitMQ</a> consumer written in PHP:</p>
+
+<ul>
+<li>Download a git resource</li>
+<li>Download a http resource</li>
+<li>Extract a tar.gz archive</li>
+<li>Crawl a Gerrit server</li>
+<li>Crawl a single Gerrit project</li>
+<li>Crawl a Gitweb site</li>
+<li>Crawl a NNTP server</li>
+<li>Crawl a single NNTP group</li>
+<li>Analyze the filesize of a file</li>
+<li>Analyze a VCS repository via CVSAnaly</li>
+<li>Analyze PHP source code via PHPLoc</li>
+<li>Analyze PHP source code via pDepend</li>
+<li>Analyze used programming languages via github linguist</li>
+</ul>
+
+<p>4 RabbitMQ producer written in PHP:</p>
+
+<ul>
+<li>Messages to crawl a Gerrit code review system</li>
+<li>Messages to download TYPO3 releases from get.typo3.org </li>
+<li>Messages to crawl a Gitweb site</li>
+<li>Messages to crawl a NNTP server</li>
+</ul>
+
+<p>This release can be downloaded from github: <a href="https://github.com/andygrunwald/TYPO3-Analytics/releases/tag/v0.0.1">v0.0.1: Release of version 0.0.1</a></p>
+
+<h1>What will be tackled in the next version?</h1>
+
+<p>There is no concrete roadmap for the next version(s).
+And i do not know which version number will it be.
+Maybe a new minor, maybe a new major version.
+The next version of TYPO3-Analytics will focus on:</p>
+
+<ul>
+<li>code quality</li>
+<li>testing</li>
+<li>stability</li>
+<li>flexibility</li>
+<li>documentation</li>
+</ul>
+
+<p>This mean that i try to refactor some code, create unit and / or integration tests, try to tackle some bugs and "unused" concepts to make a better use of existing functionality (e.g. <a href="http://www.rabbitmq.com/dlx.html">RabbitMQ Dead Lettering</a>) and to add more parameter to messages to decouple the exiting consumer from the proof of concept TYPO3.</p>
+
+<p>Further more i want to write more documentation and some blog posts about the architecture and concept of this project. I got the hope to find more contributer or to find more people which are interested in it. Maybe it will help. We will see.</p>
+
+<p>If you want to contribute and you do not know how, just contact me via Twitter (<a href="https://twitter.com/andygrunwald">@andygrunwald</a>) or by e-mail (<a href="https://github.com/andygrunwald">github profile</a>).</p>
+]]></content>
+        </entry>
+    </feed>
